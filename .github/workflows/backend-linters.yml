@@ -18,7 +18,7 @@ jobs:
       - name: PHP-CS-Fixer
         uses: docker://oskarstark/php-cs-fixer-ga
         with:
-          args: --rules=@PSR12 --diff --dry-run
+          args: src/ --rules=@PSR12 --diff --dry-run --using-cache=no
 
   php-stan:
     name: PHP Stan
